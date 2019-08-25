@@ -28,14 +28,13 @@ public:
 
 	int Add(const T &t)
 	{
-		*(m_pData + m_Number) = t;
-		m_Number++;
 		if(m_Number == m_Size)
 		{
 			m_pData = (T*) realloc(m_pData, sizeof(T) * m_Size * 2);
 			m_Size *= 2;
 		}
-		return m_Number;
+		*(m_pData + m_Number) = t;
+		return m_Number++;
 	}
 
 	int Delete(int number)
