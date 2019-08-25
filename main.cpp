@@ -9,7 +9,7 @@
 int main(int argc, char **argv)
 {
 	CDArray<int> numbers(700);
-	int max = 10, min = 0;
+	int min, max;
 
 	std::cout << "Enter min number value: ";
 	std::cin >> min;
@@ -79,7 +79,7 @@ int main(int argc, char **argv)
 	std::cout << "Expected value: " << expected_val << std::endl;
 
 
-    /* Calc variance value */
+	/* Calc variance value */
 	double variance_val{0};
 	for (int i = 0; i < distribution.Number(); i++)
 	{
@@ -90,7 +90,7 @@ int main(int argc, char **argv)
 	std::cout << "Variance value: " << variance_val << std::endl;
 
 
-	/*Calc standard deviation value*/
+	/* Calc standard deviation value */
 	double deviation_val = std::sqrt(variance_val);
 
 	std::cout << "Standard deviation: " << deviation_val << std::endl;
