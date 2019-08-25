@@ -4,4 +4,4 @@ project(math-task)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(math-executable main.cpp)
+add_executable(math-executable main.cpp cdarray.hpp)
