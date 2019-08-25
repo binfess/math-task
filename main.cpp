@@ -19,16 +19,18 @@ int main(int argc, char **argv)
 	for (int i = 1; i < 11; i++)
 	{
 		numbers.Add(i);
-		std::cout << numbers[i-1] << std::endl;
+		std::cout << numbers[i-1] << ' ';
 	}
+	std::cout << std::endl;
 
 	/* Sort array */
 	std::cout << "After sort: " << std::endl;
 	std::sort(numbers.Ptr(), numbers.Ptr() + numbers.Number());
 	for (int i = 0; i < numbers.Number(); i++)
 	{
-		std::cout << numbers[i] << std::endl;
+		std::cout << numbers[i] << ' ';
 	}
+	std::cout << std::endl;
 
 	/* Calc probablity */
 	double probablity_val = 1.0 / (max-min);
@@ -55,7 +57,10 @@ int main(int argc, char **argv)
 
 	std::cout << "Variance value: " << variance_val << std::endl;
 
-	/*  */
+	/* Calc standard deviation value */
+	double deviation_val = std::sqrt(variance_val);
+
+	std::cout << "Standard deviation: " << deviation_val << std::endl;
 
 	return 0;
 }
